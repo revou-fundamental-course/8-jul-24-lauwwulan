@@ -1,0 +1,137 @@
+.main-title {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+}
+
+.main-content {
+    flex: 1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.bmi-calculator {
+    background: #fff;
+    padding: 20px;
+}
+
+.results {
+    text-align: center;
+    padding: 10px;    
+    background-color: aliceblue;
+}
+
+.sub-results {
+    text-align: left;
+    background: #fff;
+    padding: 10px;
+}
+
+.footer-results {
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+}
+
+.bmi-calculator h1, .results h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
+    background-color: aliceblue;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-actions {
+    display: flex;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  
+}
+
+.form-actions button[type="button"] {
+    background-color: aquamarine;
+    color: #fff;  
+}
+
+.form-actions button[type="reset"] {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.results h3 {
+    margin-bottom: 10px;
+}
+
+.results h1 {
+    text-align: left;
+}
+
+.bmi-value {
+    font-size: 48px;
+    font-weight: bold;
+    color: aquamarine;
+    margin-bottom: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.actions button {
+    padding: 10px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.actions-result {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.actions-result button {
+    padding: 10px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
