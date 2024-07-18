@@ -3,22 +3,25 @@ function calculateBMI() {
     const height = document.getElementById('height').value / 100; // Convert cm to meters
     const age = document.getElementById('age').value;
 
-    if (weight <= 0) {
-        alert('Berat badan harus lebih dari nol.');
+    // Validation regex for numbers and decimal point
+    const numberRegex = /^[0-9]+(\.[0-9]+)?$/;
+
+    if (!weight || !numberRegex.test(weight) || parseFloat(weight) <= 0) {
+        alert('Berat badan harus diisi dengan angka lebih besar dari nol.');
         return;
     }
 
-    if (height <= 0) {
-        alert('Tinggi badan harus lebih dari nol.');
+    if (!height || !numberRegex.test(height) || parseFloat(height) <= 0) {
+        alert('Tinggi badan harus harus diisi dengan angka lebih besar dari nol.');
         return;
     }
 
-    if (age <= 0) {
-        alert('Usia harus lebih dari nol.');
+    if (!age || !numberRegex.test(age) || parseInt(age) <= 0) {
+        alert('Usia harus diisi dengan angka lebih besar dari nol.');
         return;
     }
 
-    const bmi = (weight / (height * height)).toFixed(1);
+    const bmi = (parseFloat(weight) / (parseFloat(height) * parseFloat(height))).toFixed(1);
 
     document.querySelector('.bmi-value').textContent = bmi;
 
@@ -31,7 +34,7 @@ function calculateBMI() {
         essay_result = 'Anda berada dalam kategori kekurangan berat badan.\nHubungi dokter lebih lanjut mengenai pola makan dan gizi yang baik untuk meningkatkan kesehatan.';
     } else if (bmi >= 18.5 && bmi < 24.9) {
         result = 'Berat Badan Ideal';
-        range_result = 'Hasil BMI diantara 18.5 dan 22.9';
+        range_result = 'Hasil BMI diantara 18.5 dan 24.9';
         essay_result = "Anda berada dalam kategori berat badan yang normal.\nTetap pertahankan berat badan Anda dan jaga berat badan Anda dengan mengatur keseimbangan antara pola makan dan aktivitas fisik Anda.";
 
     } else if (bmi >= 25 && bmi < 29.9) {
